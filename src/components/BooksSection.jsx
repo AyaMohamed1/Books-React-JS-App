@@ -3,12 +3,25 @@ import BooksCard from "./BookCard";
 import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
 function BooksSection(props) {
+  let books = [];
+  for (let book in props.selectedBookList) {
+    books.push(
+      <BooksCard
+        key={book}
+        id={book}
+        cover={props.selectedBookList[book].cover}
+        title={props.selectedBookList[book].title}
+        author={props.selectedBookList[book].author}
+        updateAllLists={props.updateAllLists}
+      />
+    );
+  }
   return (
-    <div className="h-32 ms-3">
+    <div className="ms-3">
       <h3 className="mb-6p fw-bold">{props.title}</h3>
       <hr className="mt-0" />
       <Container>
-        <Row>hello</Row>
+        <Row>{books}</Row>
       </Container>
     </div>
   );

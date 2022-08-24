@@ -21,9 +21,9 @@ class SearchBar extends React.Component {
       if (this.state.name) {
         this.searchForBook();
       }
-    }, 2000);
+    }, 500);
     this.setState({ timerId: timerId });
-    console.log(this.state.timerId);
+    // console.log(this.state.timerId);
   };
 
   render() {
@@ -47,14 +47,6 @@ class SearchBar extends React.Component {
           >
             Close
           </button>
-          {/* <button
-            className="btn btn-success ms-3 search-btn"
-            onClick={() => {
-              this.props.bookSearch(this.state.name);
-            }}
-          >
-            Submit
-          </button> */}
         </div>
       </div>
     );

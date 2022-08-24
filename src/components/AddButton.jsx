@@ -6,7 +6,9 @@ function AddButton(props) {
       <div
         className={btnClass}
         onClick={() => {
-          props.openSearch();
+          if (props.openSearch !== undefined) {
+            props.openSearch();
+          }
         }}
       >
         <i className={props.iconClass}></i>

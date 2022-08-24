@@ -4,10 +4,6 @@
   color: white;
 }
 
-.h-32 {
-  height: 32vw;
-}
-
 .mb-6p {
   margin-bottom: 6px;
 }
@@ -36,4 +32,8 @@ img {
 
 .search-btn {
   height: 3vw;
+}
+
+.select-book {
+  width: 14vw;
 }
