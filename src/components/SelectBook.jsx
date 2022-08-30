@@ -12,6 +12,7 @@ class SelectBook extends React.Component {
       author: this.props.author,
       selectedList: value,
     };
+    this.props.setBookDetails(bookSelected);
     this.setState({ bookSelectedObj: bookSelected });
     console.log("we are in selectBook");
     console.log(this.props);
